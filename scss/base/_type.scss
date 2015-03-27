@@ -1,25 +1,23 @@
-
 // -----------------------------------------------------------------------------
 // Links
 // -----------------------------------------------------------------------------
 
 a,
 a:active {
-  color: $ds-color-blue-dark;
+  color: $ds-color-link;
   text-decoration: none;
 }
 
+// @TODO: Use text-decoration: underline ?
 a:hover,
 a:active {
-  //outline: none;
 }
 
 a:focus {
-
 }
 
 a:link {
-  -webkit-tap-highlight-color: lighten($ds-color-blue-light, 20);
+  -webkit-tap-highlight-color: lighten($ds-color-link, 20);
 }
 
 // -----------------------------------------------------------------------------
@@ -158,7 +156,6 @@ q {
 
 strong,
 b {
-  color: #000;
   font-weight: $ds-font-weight-bold;
   line-height: inherit;
 }

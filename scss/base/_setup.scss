@@ -7,11 +7,13 @@
 
 html,
 body {
-  font-size: 14px;
+  font-size: 16px;
+  // @TODO: line-height
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 
+  // @TODO: change name of breakpoints
   @media #{$medium-up} {
     font-size: $ds-font-size;
   }
@@ -20,17 +22,17 @@ body {
 html {
   direction: $ds-text-direction;
   text-rendering: optimizeLegibility;
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust:     100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   background: #fff;
-  color: $ds-color-black;
+  color:       $ds-color-black;
   font-family: $ds-font-family;
-  font-style: $ds-font-style;
+  font-style:  $ds-font-style;
   font-weight: $ds-font-weight;
-  margin: 0;
+  margin:  0;
   padding: 0;
   line-height: $ds-line-height;
   position: relative;
