@@ -1,2 +1,16 @@
+// @TODO: decide if generic color names are good or specific is better.
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+$ds-color-per: #f4e7b7;
+$ds-color-happy: lightpink;
+$ds-color-charcoal: #222;
 
-$ds-color-black: #222;
+
+// -----------------------------------------------------------------------------
+// Standard things
+// @TODO: change the description on this
+// -----------------------------------------------------------------------------
+$ds-color-background: $ds-color-per;
+$ds-color-text: $ds-color-charcoal;
+$ds-color-link: $ds-color-happy;
