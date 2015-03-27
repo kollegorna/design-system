@@ -1,0 +1,37 @@
+*,
+*:before,
+*:after {
+  //@include box-sizing(border-box); @TODO CREATE OWN MIXIN
+  @include font-smoothing;
+}
+
+html,
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  @media #{$medium-up} {
+    font-size: $ds-font-size;
+  }
+}
+
+html {
+  direction: $ds-text-direction;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+  color: $ds-color-black;
+  font-family: $ds-font-family;
+  font-style: $ds-font-style;
+  font-weight: $ds-font-weight;
+  margin: 0;
+  padding: 0;
+  line-height: $ds-line-height;
+  position: relative;
+}

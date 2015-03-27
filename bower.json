@@ -1,0 +1,10 @@
+{
+  "name": "kollegorna-design-system",
+  "version": "0.0.1",
+  "main": "scss/_design-system.scss",
+  "private": true,
+  "ignore": [
+    ".gitignore",
+    "bower.json"
+  ]
+}
