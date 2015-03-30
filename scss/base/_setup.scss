@@ -8,15 +8,9 @@
 html,
 body {
   font-size: 16px;
-  // @TODO: line-height
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-
-  // @TODO: change name of breakpoints
-  @media #{$medium-up} {
-    font-size: $ds-font-size;
-  }
 }
 
 html {
@@ -26,12 +20,12 @@ html {
 
 body {
   background: #fff;
-  color:       $ds-color-black;
+  color:       $ds-color-text;
   font-family: $ds-font-family;
   font-style:  $ds-font-style;
   font-weight: $ds-font-weight;
-  margin:  0;
-  padding: 0;
   line-height: $ds-line-height;
+  margin:  0; // Normalize does this. Leave it in?
+  padding: 0;
   position: relative;
 }

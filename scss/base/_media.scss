@@ -1,6 +1,14 @@
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
+audio, canvas, video { 
+  display: inline-block;
+ *display: inline;
+ *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] { 
+  display: none; 
+}
 
 img,
 object,
@@ -22,7 +30,7 @@ embed {
 }
 
 figure {
-  @include clearfix;
+  //@include clearfix;
   margin: 0 0 $ds-type-margin;
   overflow: visible;
 
