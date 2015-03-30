@@ -64,10 +64,10 @@ $ds-rem-base: 16px !default;
 }
 
 
-// --
+// -----------------------------------------------------------------------------
 // Font smoothing
 // http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
-// --
+// -----------------------------------------------------------------------------
 @mixin ds-font-smoothing($value: on) {
   @if $value == on {
     -webkit-font-smoothing: antialiased;
@@ -79,6 +79,11 @@ $ds-rem-base: 16px !default;
   }
 }
 
+
+// -----------------------------------------------------------------------------
+// Text
+// -----------------------------------------------------------------------------
+
 $ds-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
 $ds-font-family-complementary: Georgia, serif !default;
 $ds-font-size: 100% !default;
@@ -89,7 +94,11 @@ $ds-font-weight: 400 !default;
 $ds-font-weight-bold: 600 !default;
 $ds-line-height: 1.6 !default;
 
-// Headings Base
+
+// -----------------------------------------------------------------------------
+// Headings
+// -----------------------------------------------------------------------------
+
 $ds-h1-font-size: ds-rem-calc(60) !default;
 $ds-h2-font-size: ds-rem-calc(36) !default;
 $ds-h3-font-size: ds-rem-calc(24) !default;
@@ -98,7 +107,11 @@ $ds-h5-font-size: 1rem !default;
 $ds-h6-font-size: ds-rem-calc(14) !default;
 $ds-headings-line-height: 1.4 !default;
 
-// Headings Extra
+
+// -----------------------------------------------------------------------------
+// Headings extras
+// -----------------------------------------------------------------------------
+
 $ds-heading-hero-size:      ds-rem-calc(96) !default;
 $ds-heading-page-size:      ds-rem-calc(60) !default;
 $ds-heading-module-size:    ds-rem-calc(48) !default;
@@ -107,5 +120,9 @@ $ds-heading-content-size:   ds-rem-calc(24) !default;
 $ds-heading-content-2-size: ds-rem-calc(18) !default;
 $ds-heading-content-3-size: ds-rem-calc(14) !default;
 
+
+// -----------------------------------------------------------------------------
 // Margins
+// -----------------------------------------------------------------------------
+
 $ds-type-margin: ds-rem-calc(20) !default;

@@ -1,16 +1,24 @@
-// @TODO: decide if generic color names are good or specific is better.
 // -----------------------------------------------------------------------------
 // Colors
 // -----------------------------------------------------------------------------
-$ds-color-per: #f4e7b7;
-$ds-color-happy: lightpink;
+$ds-color-per:      #f4e7b7;
+$ds-color-happy:    lightpink;
 $ds-color-charcoal: #222;
+$ds-color-white:    #fff;
+$ds-color-sea:      lightblue; 
 
 
 // -----------------------------------------------------------------------------
-// Standard things
-// @TODO: change the description on this
+// Items
+// Use these in other files for easy color changes
 // -----------------------------------------------------------------------------
-$ds-color-background: $ds-color-per;
-$ds-color-text: $ds-color-charcoal;
-$ds-color-link: $ds-color-happy;
+$ds-color-background:       $ds-color-per;
+$ds-color-text:             $ds-color-charcoal;
+$ds-color-link:             $ds-color-happy;
+$ds-color-heading:          $ds-color-charcoal;
+$ds-color-selection:        $ds-color-happy;
+$ds-color-selection-text:   $ds-color-white;
+$ds-color-input:            $ds-color-white;
+$ds-color-input-text:       $ds-color-charcoal;
+$ds-color-button:           $ds-color-sea;
+$ds-color-button-text:      $ds-color-white;
