@@ -1,7 +1,14 @@
+// -----------------------------------------------------------------------------
 // Directions
+// -----------------------------------------------------------------------------
+
 $ds-float: left !default;
 $ds-float-opposite: right !default;
 $ds-text-direction: ltr !default;
 
-// @TODO: find a good base max-width
-$ds-max-width: 960px !default;
+
+// -----------------------------------------------------------------------------
+// @TODO: Find out a good standard max width
+// -----------------------------------------------------------------------------
+
+$ds-max-width: 1088px !default;

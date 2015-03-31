@@ -1,0 +1,53 @@
+//------------------------------------------------------------------------------ 
+// Clearfix
+// @TODO: Decide if we going with mixin or extend
+//------------------------------------------------------------------------------ 
+
+@mixin ds-clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+//  %clearfix {
+//      &:before,
+//      &:after {
+//          content: "";
+//          display: table;
+//      }
+//      &:after {
+//          clear: both;
+//      }
+//  }
+
+
+//------------------------------------------------------------------------------ 
+// Box Sizing
+//------------------------------------------------------------------------------ 
+
+@mixin ds-box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+
+// -----------------------------------------------------------------------------
+// Font smoothing
+// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+// -----------------------------------------------------------------------------
+@mixin ds-font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+

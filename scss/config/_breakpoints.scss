@@ -1,8 +1,13 @@
+// @TODO: Move this ? 
+$ds-em: 16px; // What should this be?
+@function ds-em-calc($pixels, $em-size: $ds-em) {
+  @return $pixels / $em-size * 1em;
+}
 // -----------------------------------------------------------------------------
 // Breakpoints
 // @TODO: Find good standard values
 // -----------------------------------------------------------------------------
 
-$ds-breakpoint-small:  1px !default;
-$ds-breakpoint-medium: 2px !default;
-$ds-breakpoint-large:  3px !default;
+$ds-breakpoint-small:   ds-em-calc(480px) !default;
+$ds-breakpoint-medium:  ds-em-calc(768px) !default;
+$ds-breakpoint-large:   ds-em-calc(1200px) !default;

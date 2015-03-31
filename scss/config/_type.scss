@@ -1,4 +1,5 @@
-
+// @TODO: Move functions ?
+// @TODO: Review rem-calc function is there a better way?
 // -----------------------------------------------------------------------------
 // Global functions for variables
 //
@@ -25,7 +26,7 @@ $ds-rem-base: 16px !default;
 // Convert to rem
 // -----------------------------------------------------------------------------
 @function ds-convert-to-rem($value, $base-value: $ds-rem-base) {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  $value: ds-strip-unit($value) / ds-strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
@@ -51,34 +52,17 @@ $ds-rem-base: 16px !default;
 //   ds-rem-calc((16px, 32px, 48), 8px);
 // -----------------------------------------------------------------------------
 
-@function ds-rem-calc($values, $base-value: $ng-rem-base) {
+@function ds-rem-calc($values, $base-value: $ds-rem-base) {
   $max: length($values);
 
-  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  @if $max == 1 { @return ds-convert-to-rem(nth($values, 1), $base-value); }
 
   $remValues: ();
   @for $i from 1 through $max {
-    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    $remValues: append($remValues, ds-convert-to-rem(nth($values, $i), $base-value));
   }
   @return $remValues;
 }
-
-
-// -----------------------------------------------------------------------------
-// Font smoothing
-// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
-// -----------------------------------------------------------------------------
-@mixin ds-font-smoothing($value: on) {
-  @if $value == on {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  @else {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-  }
-}
-
 
 // -----------------------------------------------------------------------------
 // Text
