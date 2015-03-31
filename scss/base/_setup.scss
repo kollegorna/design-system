@@ -1,8 +1,8 @@
 *,
 *:before,
 *:after {
-  //@include box-sizing(border-box); @TODO CREATE OWN MIXIN
-  @include font-smoothing;
+  @include ds-box-sizing(border-box);
+  @include ds-font-smoothing;
 }
 
 html,
@@ -19,13 +19,19 @@ html {
 }
 
 body {
-  background: #fff;
+  background:  $ds-color-background;
   color:       $ds-color-text;
   font-family: $ds-font-family;
   font-style:  $ds-font-style;
   font-weight: $ds-font-weight;
   line-height: $ds-line-height;
-  margin:  0; // Normalize does this. Leave it in?
+  margin:  0;                       // Normalize does this. Leave it in?
   padding: 0;
   position: relative;
+}
+
+// DELETE THIS
+.wrapper {
+  width: $ds-max-width;
+  margin: 0 auto;
 }

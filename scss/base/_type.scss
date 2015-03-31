@@ -96,7 +96,7 @@ h6 {
 // -----------------------------------------------------------------------------
 
 p {
-  font-size: rem-calc(18);
+  font-size: ds-rem-calc(18);
   margin: 0 0 $ds-type-margin;
 }
 
@@ -104,23 +104,24 @@ hr {
   border: 1px solid #e9e8e8;
   border-width: 1px 0 0;
   clear: both;
-  margin: ($ds-type-margin*2) 0 (($ds-type-margin*2) - rem-calc(1));
+  margin: ($ds-type-margin*2) 0 (($ds-type-margin*2) - ds-rem-calc(1));
   height: 0;
 }
 
 blockquote,
 q {
+  @include ds-clearfix();
   quotes: none;
 }
 
 blockquote:before,
 q:before {
-  //content: '“'; Clearfix?
+
 }
 
 blockquote:after,
 q:after {
-  //content: '”'; Clearfix?
+
 }
 
 blockquote {
@@ -190,7 +191,7 @@ mark {
   background: rgba(red, .5);
   color: red;
   font-weight: $ds-font-weight;
-  padding: 0 rem-calc(3);
+  padding: 0 ds-rem-calc(3);
 }
 
 ins {
@@ -198,13 +199,13 @@ ins {
   color: green;
   font-style: italic;
   font-weight: $ds-font-weight;
-  padding: 0 rem-calc(3);
+  padding: 0 ds-rem-calc(3);
   text-decoration: none;
 }
 
 pre {
   margin: $ds-type-margin 0;
-  padding: rem-calc(12);
+  padding: ds-rem-calc(12);
   white-space: pre;
   white-space: pre-wrap;
   white-space: pre-line;
@@ -236,16 +237,16 @@ sup {
 }
 
 small {
-  font-size: rem-calc(14);
+  font-size: ds-rem-calc(14);
 }
 
 kbd {
   background: rgba(red, .5);
   border: 1px solid red;
-  border-radius: rem-calc(4);
+  border-radius: ds-rem-calc(4);
   font: normal normal 0.8em/90% sans-serif;
-  margin: 0 rem-calc(4);
-  padding: rem-calc(2) rem-calc(6);
+  margin: 0 ds-rem-calc(4);
+  padding: ds-rem-calc(2) ds-rem-calc(6);
 }
 
 address {
