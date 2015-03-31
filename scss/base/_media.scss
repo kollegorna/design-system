@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// Media
+// -----------------------------------------------------------------------------
+
 audio, canvas, video { 
   display: inline-block;
  *display: inline;
@@ -30,7 +34,7 @@ embed {
 }
 
 figure {
-  //@include clearfix;
+  @include ds-clearfix;
   margin: 0 0 $ds-type-margin;
   overflow: visible;
 

@@ -12,6 +12,14 @@ caption {
   text-align: $ds-float;
 }
 
+thead {
+
+}
+
+tfoot {
+  font-style: italic;
+}
+
 tbody {
   border: 0;
 }
@@ -30,6 +38,3 @@ td img {
   vertical-align: top;
 }
 
-tfoot {
-  font-style: italic;
-}

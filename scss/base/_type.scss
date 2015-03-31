@@ -8,17 +8,19 @@ a:active {
   text-decoration: none;
 }
 
-// @TODO: Use text-decoration: underline ? or color
 a:hover,
 a:active {
+  color: lighten($ds-color-link, 16);
 }
 
 a:focus {
+
 }
 
 a:link {
   -webkit-tap-highlight-color: lighten($ds-color-link, 20);
 }
+
 
 // -----------------------------------------------------------------------------
 // Headings
@@ -34,15 +36,11 @@ a:link {
   a {
     font-weight: inherit;
   }
-
-  small {
-
-  }
 }
 
 %h1 {
   @extend %h1-6;
-  font-size: $ds-h1-font-size;
+  font-size:   $ds-h1-font-size;
   font-weight: $ds-font-weight-light;
 }
 h1 {
@@ -51,7 +49,7 @@ h1 {
 
 %h2 {
   @extend %h1-6;
-  font-size: $ds-h2-font-size;
+  font-size:   $ds-h2-font-size;
   font-weight: $ds-font-weight-light;
 }
 h2 {
@@ -96,14 +94,14 @@ h6 {
 // -----------------------------------------------------------------------------
 
 p {
-  font-size: ds-rem-calc(18);
+  font-size: ds-rem-calc(16);
   margin: 0 0 $ds-type-margin;
 }
 
 hr {
-  border: 1px solid #e9e8e8;
+  @include ds-clearfix;
+  border: 1px solid $ds-color-border;
   border-width: 1px 0 0;
-  clear: both;
   margin: ($ds-type-margin*2) 0 (($ds-type-margin*2) - ds-rem-calc(1));
   height: 0;
 }
@@ -114,21 +112,11 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-q:before {
-
-}
-
-blockquote:after,
-q:after {
-
-}
-
 blockquote {
-  font-size: 1.4em;
+  font-size: ds-rem-calc(24);
   font-style: italic;
   font-weight: $ds-font-weight;
-  line-height: 1.6;
+  line-height: 1.45833333em;
   margin: 0 0 $ds-type-margin;
   position: relative;
 
@@ -171,11 +159,10 @@ abbr,
 acronym {
   border-bottom: 1px dotted red;
   cursor: help;
-  text-transform: uppercase;
 }
 
-abbr {
-  text-transform: none;
+acronym {
+  text-transform: uppercase;
 }
 
 cite {
@@ -205,7 +192,7 @@ ins {
 
 pre {
   margin: $ds-type-margin 0;
-  padding: ds-rem-calc(12);
+  padding: ds-rem-calc(16);
   white-space: pre;
   white-space: pre-wrap;
   white-space: pre-line;
@@ -275,6 +262,9 @@ ol {
   list-style: disc inside;
   margin: 0 0 $ds-type-margin;
   padding: 0;
+}
+ol {
+  list-style: decimal inside;
 }
 
 li ul,

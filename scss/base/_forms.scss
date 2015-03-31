@@ -1,5 +1,10 @@
+// -----------------------------------------------------------------------------
+// Forms
+// -----------------------------------------------------------------------------
+
 fieldset {
-  border-color: $ds-color-border;
+  border-color:  $ds-color-border;
+  margin-bottom: $ds-type-margin;
 }
 
 legend {
@@ -9,18 +14,17 @@ legend {
 label {
   font-size: $ds-h4-font-size;
   display: block;
-  margin-bottom: 3px;
 }
 
 input,
 textarea,
 select {
+  border: 1px solid $ds-color-input-border;
   border-radius: 2px;
   background: $ds-color-input;
-  border: 1px solid $ds-color-input-border;
-  color: $ds-color-input-text;
+  color:      $ds-color-input-text;
   font-family: inherit;
-  font-size: ds-rem-calc(18);
+  font-size: ds-rem-calc(16);
   margin: 0 0 $ds-type-margin;
   max-width: 100%;
   width: 100%;
@@ -36,16 +40,14 @@ select:focus {
 input[type="radio"],
 input[type="checkbox"] {
   border: 0;
-  margin: 0 0 $ds-type-margin;
   max-width: auto;
-  padding: 0;
   width: auto;
 
   & + label {
     display: inline-block;
     margin: 0 0 $ds-type-margin;
-    padding-left: rem-calc(6px);
-    padding-right: rem-calc(20px);
+    padding-left: ds-rem-calc(6);
+    padding-right: ds-rem-calc(20);
   }
 }
 
@@ -80,4 +82,9 @@ optgroup {
 }
 :-ms-input-placeholder {
    color: #777;
+}
+
+// Shame
+fieldset ul {
+  list-style: none;
 }
