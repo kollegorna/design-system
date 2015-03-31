@@ -183,21 +183,21 @@ cite {
 }
 
 del {
+  background: rgba(red, .3);
   color: red;
   text-decoration: line-through;
 }
 
 mark {
-  background: rgba(red, .5);
-  color: red;
+  background: $ds-color-selection;
+  color: $ds-color-selection-text;
   font-weight: $ds-font-weight;
   padding: 0 ds-rem-calc(3);
 }
 
 ins {
-  background: rgba(green, .5);
+  background: rgba(green, .3);
   color: green;
-  font-style: italic;
   font-weight: $ds-font-weight;
   padding: 0 ds-rem-calc(3);
   text-decoration: none;
@@ -241,8 +241,8 @@ small {
 }
 
 kbd {
-  background: rgba(red, .5);
-  border: 1px solid red;
+  background: rgba(lightgray, .5);
+  border: 1px solid gray;
   border-radius: ds-rem-calc(4);
   font: normal normal 0.8em/90% sans-serif;
   margin: 0 ds-rem-calc(4);
