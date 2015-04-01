@@ -24,7 +24,6 @@ a:link {
 
 // -----------------------------------------------------------------------------
 // Headings
-// @TODO: Add standard size/weight for different breakpoints
 // -----------------------------------------------------------------------------
 
 %h1-6 {
@@ -40,7 +39,7 @@ a:link {
 
 %h1 {
   @extend %h1-6;
-  font-size:   $ds-h1-font-size;
+  font-size: $ds-h1-font-size;
   font-weight: $ds-font-weight-light;
 }
 h1 {
@@ -94,7 +93,6 @@ h6 {
 // -----------------------------------------------------------------------------
 
 p {
-  font-size: ds-rem-calc(16);
   margin: 0 0 $ds-type-margin;
 }
 
@@ -108,15 +106,15 @@ hr {
 
 blockquote,
 q {
-  @include ds-clearfix();
   quotes: none;
 }
 
 blockquote {
+  font-family: $ds-font-family-complementary;
   font-size: ds-rem-calc(24);
   font-style: italic;
   font-weight: $ds-font-weight;
-  line-height: 1.45833333em;
+  line-height: 1.45833333;
   margin: 0 0 $ds-type-margin;
   position: relative;
 
@@ -170,7 +168,7 @@ cite {
 }
 
 del {
-  background: rgba(red, .3);
+  background: lighten(red, 70);
   color: red;
   text-decoration: line-through;
 }
@@ -183,7 +181,7 @@ mark {
 }
 
 ins {
-  background: rgba(green, .3);
+  background: lighten(green, 70);
   color: green;
   font-weight: $ds-font-weight;
   padding: 0 ds-rem-calc(3);
@@ -228,7 +226,7 @@ small {
 }
 
 kbd {
-  background: rgba(lightgray, .5);
+  background: lighten(lightgray, 50);
   border: 1px solid gray;
   border-radius: ds-rem-calc(4);
   font: normal normal 0.8em/90% sans-serif;
@@ -263,6 +261,7 @@ ol {
   margin: 0 0 $ds-type-margin;
   padding: 0;
 }
+
 ol {
   list-style: decimal inside;
 }

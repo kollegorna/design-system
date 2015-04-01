@@ -22,23 +22,22 @@ select {
   border: 1px solid $ds-color-input-border;
   border-radius: 2px;
   background: $ds-color-input;
-  color:      $ds-color-input-text;
+  color: $ds-color-input-text;
   font-family: inherit;
   font-size: ds-rem-calc(16);
   margin: 0 0 $ds-type-margin;
   max-width: 100%;
   width: 100%;
   padding: ds-rem-calc(14) ds-rem-calc(16);
+
+  &:focus {
+
+  }
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-
-}
-
-input[type="radio"],
-input[type="checkbox"] {
+// Using extends because of specificity
+%input-checkbox,
+%input-radio {
   border: 0;
   max-width: auto;
   width: auto;
@@ -72,19 +71,14 @@ optgroup {
 }
 
 ::-webkit-input-placeholder {
-   color: #777;
+   color: lighten($ds-color-input-text, 20);
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #777;
+   color: lighten($ds-color-input-text, 20);
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #777;
+   color: lighten($ds-color-input-text, 20);
 }
 :-ms-input-placeholder {
-   color: #777;
-}
-
-// Shame
-fieldset ul {
-  list-style: none;
+   color: lighten($ds-color-input-text, 20);
 }

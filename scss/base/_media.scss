@@ -2,7 +2,7 @@
 // Media
 // -----------------------------------------------------------------------------
 
-audio, canvas, video { 
+audio, canvas, video {
   display: inline-block;
  *display: inline;
  *zoom: 1;
@@ -10,8 +10,8 @@ audio, canvas, video {
 audio:not([controls]) {
   display: none;
 }
-[hidden] { 
-  display: none; 
+[hidden] {
+  display: none;
 }
 
 img,
@@ -27,6 +27,8 @@ img {
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;
 }
+
+// @TODO SVG
 
 object,
 embed {
