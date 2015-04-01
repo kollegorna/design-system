@@ -97,7 +97,7 @@ p {
 }
 
 hr {
-  @include ds-clearfix;
+  @extend %ds-clearfix;
   border: 1px solid $ds-color-border;
   border-width: 1px 0 0;
   margin: ($ds-type-margin*2) 0 (($ds-type-margin*2) - ds-rem-calc(1));

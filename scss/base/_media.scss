@@ -36,7 +36,7 @@ embed {
 }
 
 figure {
-  @include ds-clearfix;
+  @extend %ds-clearfix;
   margin: 0 0 $ds-type-margin;
   overflow: visible;
 
