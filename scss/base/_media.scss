@@ -14,25 +14,18 @@ audio:not([controls]) {
   display: none;
 }
 
-img,
-object,
-embed {
-  max-width: 100%;
-}
-
 img {
   border: 0;
   display: inline-block;
   height: auto;
+  max-width: 100%;
   vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
 }
 
-// @TODO SVG
-
-object,
-embed {
+svg {
+  display: inline-block;
   height: 100%;
+  vertical-align: middle;
 }
 
 figure {
