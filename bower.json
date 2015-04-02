@@ -5,6 +5,8 @@
   "private": true,
   "ignore": [
     ".gitignore",
-    "bower.json"
+    "bower.json",
+    "README.md",
+    "styleguide/"
   ]
 }
