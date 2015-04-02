@@ -6,10 +6,19 @@ The system is to be used with normalize.
 
 
 
-## Develop 
+## Local setup for development
 
-1. git clone https://github.com/kollegorna/design-system.git
-1. cd design-system/app
-1. npm install
-1. gulp install
-1. gulp serve
+1. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
+1. Clone repository
+1. $ cd design-system/styleguide
+1. $ npm install
+1. $ gulp install
+
+### Gulp commands
+
+- $ gulp install
+    - Runs: bundle install and bower install
+- $ gulp serve
+    - Builds Middleman and create a browser-sync server
+- $ gulp build
+    - Builds Middleman
