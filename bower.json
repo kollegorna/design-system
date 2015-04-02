@@ -5,6 +5,7 @@
   "private": true,
   "ignore": [
     ".gitignore",
-    "bower.json"
+    "bower.json",
+    "app/"
   ]
 }
