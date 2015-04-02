@@ -6,6 +6,7 @@
   "ignore": [
     ".gitignore",
     "bower.json",
-    "app/"
+    "README.md",
+    "styleguide/"
   ]
 }
