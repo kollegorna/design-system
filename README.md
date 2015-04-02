@@ -1,12 +1,6 @@
-# Kollegorna Design System
+# Kollegorna design system
 
-The system is to be used with normalize.
-
-## Use in project
-
-
-
-## Local setup for development
+## Local setup
 
 1. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
 1. Clone repository
