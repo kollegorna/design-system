@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// Import normalize
+@import "normalize-scss";
+
+// Import the design system
+@import "../../../../scss/_design-system";
+
+.header {
+  background: $ds-color-white;
+  border-bottom: solid 1px $ds-color-border;
+  overflow: auto;
+  padding: $ds-type-margin;
+}
+.header__headline {
+  text-align: center;
+}
+
+.styleguide {
+  width: $ds-max-width;
+  margin: 0 auto;
+}
+
+.footer {
+  background: $ds-color-white;
+  border-top: solid 1px $ds-color-border;
+  overflow: auto;
+  padding: $ds-type-margin;
+}
+.footer__text {
+  text-align: center;
+}
