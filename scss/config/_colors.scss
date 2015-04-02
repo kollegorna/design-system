@@ -1,2 +1,44 @@
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+$ds-color-kollegorna:      #F4E7B7;
+$ds-color-charcoal:        #333333;
+$ds-color-white:           #FFFFFF;
+$ds-color-sea:             #00C7FD;
 
-$ds-color-black: #222;
+$ds-color-orange:          #F77916;
+$ds-color-orange-power:    #E86F12;
+$ds-color-orange-dark:     #B55015;
+$ds-color-orange-darkest:  #A64912;
+$ds-color-green:           #25C480;
+$ds-color-sand:            #CEBD80;
+$ds-color-clay:            #93875D;
+$ds-color-mud:             #B7B19C;
+$ds-color-scrub:           #403E35;
+$ds-color-peach:           #F9B57A;
+$ds-color-judge:           #5B5541;
+$ds-color-kelp:            #484436;
+
+// Appley grays
+$ds-color-gallery:         #F0EFF0;
+$ds-color-gainsboro:       #DCDCDC;
+$ds-color-light-gray:      #D6D5D6;
+$ds-color-magnesium:       #B2B2B2;
+
+
+// -----------------------------------------------------------------------------
+// Items
+// Use these variables in other files for easy color changes
+// -----------------------------------------------------------------------------
+$ds-color-background:       $ds-color-kollegorna;
+$ds-color-text:             $ds-color-judge;
+$ds-color-link:             $ds-color-orange;
+$ds-color-heading:          $ds-color-scrub;
+$ds-color-selection:        $ds-color-kelp;
+$ds-color-selection-text:   $ds-color-background;
+$ds-color-input:            $ds-color-white;
+$ds-color-input-border:     $ds-color-gainsboro;
+$ds-color-input-text:       $ds-color-charcoal;
+$ds-color-button:           $ds-color-orange-power;
+$ds-color-button-text:      $ds-color-white;
+$ds-color-border:           $ds-color-orange;

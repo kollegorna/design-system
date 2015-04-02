@@ -1,4 +1,5 @@
-
+// @TODO: Move functions ?
+// @TODO: Review rem-calc function is there a better way?
 // -----------------------------------------------------------------------------
 // Global functions for variables
 //
@@ -25,7 +26,7 @@ $ds-rem-base: 16px !default;
 // Convert to rem
 // -----------------------------------------------------------------------------
 @function ds-convert-to-rem($value, $base-value: $ds-rem-base) {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  $value: ds-strip-unit($value) / ds-strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
@@ -33,12 +34,14 @@ $ds-rem-base: 16px !default;
 // -----------------------------------------------------------------------------
 // Rem calc
 //
-// New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+// New Syntax, allows to optionally calculate on a different base value to
+// counter compounding effect of rem's.
 // Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
 //
 //   ds-rem-calc(10 20 30px 40);
 //
-// Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+// Space delimited, if you want to delimit using comma's, wrap it in another
+// pair of brackets.
 //
 //   ds-rem-calc((10, 20, 30, 40px));
 //
@@ -51,35 +54,23 @@ $ds-rem-base: 16px !default;
 //   ds-rem-calc((16px, 32px, 48), 8px);
 // -----------------------------------------------------------------------------
 
-@function ds-rem-calc($values, $base-value: $ng-rem-base) {
+@function ds-rem-calc($values, $base-value: $ds-rem-base) {
   $max: length($values);
 
-  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  @if $max == 1 { @return ds-convert-to-rem(nth($values, 1), $base-value); }
 
   $remValues: ();
   @for $i from 1 through $max {
-    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    $remValues: append($remValues, ds-convert-to-rem(nth($values, $i), $base-value));
   }
   @return $remValues;
 }
 
+// -----------------------------------------------------------------------------
+// Text
+// -----------------------------------------------------------------------------
 
-// --
-// Font smoothing
-// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
-// --
-@mixin ds-font-smoothing($value: on) {
-  @if $value == on {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  @else {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-  }
-}
-
-$ds-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$ds-font-family: "Source Sans Pro", "Helvetica Neue", sans-serif !default;
 $ds-font-family-complementary: Georgia, serif !default;
 $ds-font-size: 100% !default;
 $ds-font-smoothing: antialiased !default;
@@ -87,25 +78,25 @@ $ds-font-style: normal !default;
 $ds-font-weight-light: 300 !default;
 $ds-font-weight: 400 !default;
 $ds-font-weight-bold: 600 !default;
-$ds-line-height: 1.6 !default;
+$ds-line-height: 1.375 !default;
 
-// Headings Base
-$ds-h1-font-size: ds-rem-calc(60) !default;
+// -----------------------------------------------------------------------------
+// Headings
+//
+// Helpful resource:
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+// -----------------------------------------------------------------------------
+
+$ds-h1-font-size: ds-rem-calc(48) !default;
 $ds-h2-font-size: ds-rem-calc(36) !default;
-$ds-h3-font-size: ds-rem-calc(24) !default;
+$ds-h3-font-size: ds-rem-calc(28) !default;
 $ds-h4-font-size: ds-rem-calc(18) !default;
-$ds-h5-font-size: 1rem !default;
+$ds-h5-font-size: ds-rem-calc(16) !default;
 $ds-h6-font-size: ds-rem-calc(14) !default;
-$ds-headings-line-height: 1.4 !default;
+$ds-headings-line-height: 1.25 !default;
 
-// Headings Extra
-$ds-heading-hero-size: ds-rem-calc(96) !default;
-$ds-heading-page-size: ds-rem-calc(60) !default;
-$ds-heading-module-size: ds-rem-calc(48) !default;
-$ds-heading-module-2-size: ds-rem-calc(30) !default;
-$ds-heading-content-size: ds-rem-calc(24) !default;
-$ds-heading-content-2-size: ds-rem-calc(18) !default;
-$ds-heading-content-3-size: ds-rem-calc(14) !default;
-
+// -----------------------------------------------------------------------------
 // Margins
+// -----------------------------------------------------------------------------
+
 $ds-type-margin: ds-rem-calc(20) !default;

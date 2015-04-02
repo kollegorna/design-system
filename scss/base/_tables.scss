@@ -1,3 +1,6 @@
+// -----------------------------------------------------------------------------
+// Tables
+// -----------------------------------------------------------------------------
 
 table {
   border: 0;
@@ -7,6 +10,14 @@ table {
 
 caption {
   text-align: $ds-float;
+}
+
+thead {
+
+}
+
+tfoot {
+  font-style: italic;
 }
 
 tbody {
@@ -27,6 +38,3 @@ td img {
   vertical-align: top;
 }
 
-tfoot {
-  font-style: italic;
-}
