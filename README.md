@@ -1,7 +1,15 @@
 # Kollegorna Design System
 
-To use with Normalize
+The system is to be used with normalize.
 
-## TODO
+## Use in project
 
-There is todos in the different files
+
+
+## Develop 
+
+1. git clone https://github.com/kollegorna/design-system.git
+1. cd design-system/app
+1. npm install
+1. gulp install
+1. gulp serve
