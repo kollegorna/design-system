@@ -72,15 +72,9 @@ optgroup {
   font-weight: $ds-font-weight-bold;
 }
 
-::-webkit-input-placeholder {
-   color: lighten($ds-color-input-text, 20);
-}
-:-moz-placeholder { /* Firefox 18- */
-   color: lighten($ds-color-input-text, 20);
-}
-::-moz-placeholder {  /* Firefox 19+ */
-   color: lighten($ds-color-input-text, 20);
-}
+::-webkit-input-placeholder,
+:-moz-placeholder, // Firefox 18-
+::-moz-placeholder, // Firefox 19+
 :-ms-input-placeholder {
    color: lighten($ds-color-input-text, 20);
 }
