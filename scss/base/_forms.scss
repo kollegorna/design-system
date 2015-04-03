@@ -35,7 +35,9 @@ select {
   }
 }
 
-// Using extends because of specificity
+// Checkboxes and radiobuttons
+// We use placeholders for this. If using for example input[type="checkbox"]
+// we'd be getting in trouble with specificity.
 %input-checkbox,
 %input-radio {
   border: 0;
