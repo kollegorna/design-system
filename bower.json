@@ -1,6 +1,6 @@
 {
   "name": "kollegorna-design-system",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "scss/_design-system.scss",
   "private": true,
   "ignore": [
@@ -8,5 +8,8 @@
     "bower.json",
     "README.md",
     "styleguide/"
-  ]
+  ],
+  "dependencies": {
+    "normalize-scss": ">= 3.0.2"
+  }
 }
