@@ -4,8 +4,8 @@
 
 @mixin ds-box-sizing($box-model) {
   -webkit-box-sizing: $box-model; // Safari <= 5
-     -moz-box-sizing: $box-model; // Firefox <= 19
-          box-sizing: $box-model;
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
 }
 
 
@@ -14,15 +14,16 @@
 //------------------------------------------------------------------------------
 
 %ds-clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
+
 
 //------------------------------------------------------------------------------
 // Visually hidden
@@ -32,7 +33,6 @@
 
 // Hide only visually, but have it available for screen readers:
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-
 %ds-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -47,7 +47,6 @@
 // Extends the %visuallyhidden to allow the element
 // to be focusable when navigated to via the keyboard:
 // https://www.drupal.org/node/897638
-
 %ds-visuallyhidden--focusable {
   &:active,
   &:focus {
@@ -60,10 +59,12 @@
   }
 }
 
+
 // -----------------------------------------------------------------------------
 // Font smoothing
 // http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
 // -----------------------------------------------------------------------------
+
 @mixin ds-font-smoothing($value: on) {
   @if $value == on {
     -webkit-font-smoothing: antialiased;
