@@ -10,6 +10,11 @@ If it for some reason hasn't then run this:
 
 `$ bower install normalize-scss --save`
 
+## Updating the Design System
+
+If changes has been made to [kollegorna/design-system](https://github.com/kollegorna/design-system) then just run:
+
+`$ bower update`
 
 
 
