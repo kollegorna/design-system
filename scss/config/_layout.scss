@@ -8,7 +8,8 @@ $ds-text-direction: ltr !default;
 
 
 // -----------------------------------------------------------------------------
-// @TODO: Find out a good standard max width
+// Measurments
 // -----------------------------------------------------------------------------
 
-$ds-max-width: 1088px !default;
+// A sensible default for maximum width of a text container
+$ds-max-width: 700px !default;
