@@ -6,7 +6,7 @@
 // --
 // Variables, placeholders, functions and mixins.
 // --
-@import "config/_config";
+@import "config/__config";
 
 // --
 // "A Base rule is applied to an element using an element selector, a descendent
@@ -15,4 +15,4 @@
 // that element should look in all occurrences on the page."
 // Source: https://smacss.com/book/type-base
 // --
-@import "base/_base";
+@import "base/__base";
