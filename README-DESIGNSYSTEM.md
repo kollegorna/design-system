@@ -4,9 +4,9 @@ Building something for Kollegorna? Good times and much success awaits you! Here'
 
 ## Prerequisite: Normalize.css
 
-The design system should be used together with Normalize.css. We've chosen not to bundle it so you need to make sure it's included in the application.
+The design system should be used together with Normalize.css. If you've installed the design system with Bower (which you should) then [appleboy/normalize.scss](https://github.com/appleboy/normalize.scss) will have been downloaded for you.
 
-It's recommended that you use the Sass port: [JohnAlbin/normalize-scss](https://github.com/JohnAlbin/normalize-scss).
+If it for some reason hasn't then run this:
 
 `$ bower install normalize-scss --save`
 
