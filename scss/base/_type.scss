@@ -10,7 +10,7 @@ a:active {
 
 a:hover,
 a:active {
-  color: lighten($ds-color-link, 16);
+  color: $ds-color-heading;
 }
 
 a:focus {
@@ -30,7 +30,7 @@ a:link {
   color: $ds-color-heading;
   font-weight: $ds-font-weight;
   line-height: $ds-headings-line-height;
-  margin: .5em 0 .2em;
+  margin: 1.2rem 0 1rem;
 
   a {
     font-weight: inherit;
@@ -66,6 +66,7 @@ h3 {
 %h4 {
   @extend %h1-6;
   font-size: $ds-h4-font-size;
+  text-transform: uppercase;
 }
 h4 {
   @extend %h4;
@@ -74,6 +75,8 @@ h4 {
 %h5 {
   @extend %h1-6;
   font-size: $ds-h5-font-size;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 h5 {
   @extend %h5;
@@ -82,6 +85,8 @@ h5 {
 %h6 {
   @extend %h1-6;
   font-size: $ds-h6-font-size;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 h6 {
   @extend %h6;
@@ -91,6 +96,14 @@ h6 {
 // -----------------------------------------------------------------------------
 // Body text
 // -----------------------------------------------------------------------------
+
+p,
+blockquote,
+ol,
+ul,
+dl {
+  font-size: $ds-font-size-body-copy;
+}
 
 p {
   margin: 0 0 $ds-type-margin;
@@ -110,12 +123,13 @@ q {
 }
 
 blockquote {
-  font-family: $ds-font-family-complementary;
+  border-left: 2px solid $ds-color-text;
   font-size: ds-rem-calc(24);
   font-style: italic;
   font-weight: $ds-font-weight;
   line-height: 1.45833333;
-  margin: 0 0 $ds-type-margin;
+  margin: 0 0 $ds-type-margin -20px;
+  padding-left: 20px;
   position: relative;
 
   cite {
@@ -138,8 +152,16 @@ q {
 
 strong,
 b {
+  color: $ds-color-heading;
   font-weight: $ds-font-weight-bold;
   line-height: inherit;
+}
+
+u {
+  border-bottom: 1px solid $ds-color-text;
+  color: $ds-color-heading;
+  display: inline-block;
+  text-decoration: none;
 }
 
 em,
@@ -150,12 +172,14 @@ i {
 }
 
 dfn {
+  color: $ds-color-heading;
   font-weight: $ds-font-weight-bold;
 }
 
 abbr,
 acronym {
-  border-bottom: 1px dotted red;
+  border-bottom: 1px dotted $ds-color-border;
+  color: $ds-color-heading;
   cursor: help;
 }
 
@@ -277,7 +301,10 @@ dl {
 }
 
 dt {
+  color: $ds-color-heading;
+  font-size: $ds-h5-font-size;
   font-weight: $ds-font-weight-bold;
+  text-transform: uppercase;
 }
 
 dd {

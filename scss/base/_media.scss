@@ -32,6 +32,7 @@ svg {
 
 figure {
   @extend %ds-clearfix;
+  font-size: $ds-font-size-body-copy;
   margin: 0 0 $ds-type-margin;
   overflow: visible;
 
@@ -46,6 +47,7 @@ figure {
 
 figcaption {
   clear: both;
+  color: $ds-color-text-light;
 
   p:last-child {
     margin-bottom: 0;
