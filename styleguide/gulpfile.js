@@ -18,7 +18,7 @@ gulp.task('browser-reload', ['middleman-build'], function() {
 
 gulp.task('browser-sync', ['middleman-build'], function() {
   browserSync({
-    server: { 
+    server: {
       baseDir: 'build'
     },
     port: 4060
@@ -31,9 +31,7 @@ gulp.task('watch', function() {
   gulp.watch('source/layouts/*.erb', ['browser-reload']);
   gulp.watch('source/assets/javascripts/*.js', ['browser-reload']);
   gulp.watch('source/assets/stylesheets/*.css.scss', ['browser-reload']);
-  gulp.watch('../scss/*.scss', ['browser-reload']);
-  gulp.watch('../scss/base/*.scss', ['browser-reload']);
-  gulp.watch('../scss/config/*.scss', ['browser-reload']);
+  gulp.watch('../scss/**', ['browser-reload']);
 });
 
 gulp.task('serve', ['browser-sync', 'watch']);
