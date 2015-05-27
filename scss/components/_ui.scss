@@ -1,0 +1,269 @@
+
+// -----------------------------------------------------------------------------
+// Button: Default
+// -----------------------------------------------------------------------------
+
+%ds-button {
+  background: none;
+  border: 1px solid $ds-color-orange;
+  border-radius: 999em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $ds-font-size-body-copy;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button {
+  @extend %ds-button;
+}
+
+%ds-button__icon {
+  margin-right: 8px;
+  max-width: 14px;
+  position: relative;
+  top: -1px;
+}
+.button__icon {
+  @extend %ds-button__icon;
+}
+
+%ds-button--small {
+  font-size: ds-rem-calc(16);
+  height: 30px;
+  line-height: 28px;
+  padding: 0 13px;
+}
+.button--small {
+  @extend %ds-button--small;
+}
+
+%ds-button--primary {
+  background: $ds-color-orange;
+  color: white;
+
+  &:hover {
+    background: darken($ds-color-orange, 10);
+    border-color: darken($ds-color-orange, 10);
+    color: white;
+  }
+}
+.button--primary {
+  @extend %ds-button--primary;
+}
+
+%ds-button--secondary {
+  border-color: $ds-color-text-light;
+  color: $ds-color-text-light;
+}
+.button--secondary {
+  @extend %ds-button--secondary;
+}
+
+%ds-button--disabled {
+  border-color: $ds-color-border;
+  color: $ds-color-border;
+  cursor: not-allowed;
+
+  &:hover {
+    color: $ds-color-border;
+  }
+}
+.button--disabled {
+  @extend %ds-button--disabled;
+}
+
+// -----------------------------------------------------------------------------
+// Button: Icon
+// -----------------------------------------------------------------------------
+
+%ds-button-icon {
+  background: none;
+  border: 1px solid $ds-color-orange;
+  border-radius: 999em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $ds-font-size-body-copy;
+  height: 40px;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40px;
+
+  img {
+    max-width: 18px;
+  }
+}
+.button-icon {
+  @extend %ds-button-icon;
+}
+
+// -----------------------------------------------------------------------------
+// Gradient backgrounds
+// -----------------------------------------------------------------------------
+
+%ds-gradient-background {
+  //@include background-image(linear-gradient(left top, $ds-color-orange, darken($ds-color-orange, 10%)));
+  background-image: linear-gradient(to right bottom, $ds-color-orange, darken($ds-color-orange, 10%));
+  border-radius: 2px;
+}
+
+%ds-gradient-background--wide {
+  //@include background-image(linear-gradient(left top, $ds-color-orange, $ds-color-orange-dark));
+  background-image: linear-gradient(to right bottom, $ds-color-orange, $ds-color-orange-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Box: Gradient border
+// -----------------------------------------------------------------------------
+
+%ds-gradient-border {
+  display: inline-block;
+
+  &:after {
+    @extend %ds-gradient-background;
+    content: " ";
+    display: block;
+    height: 3px;
+    overflow: hidden;
+  }
+}
+.gradient-border {
+  @extend %ds-gradient-border;
+}
+
+%ds-gradient-border--block {
+  display: block;
+}
+.gradient-border--block {
+  @extend %ds-gradient-border--block;
+}
+
+// -----------------------------------------------------------------------------
+// Box: Gradient border
+// -----------------------------------------------------------------------------
+
+@mixin ds-box-gradient-border($width: 25px, $height: 3px, $padding: 25px) {
+  padding-top: $padding;
+  position: relative;
+
+  &:before {
+    @extend %ds-gradient-background;
+    content: " ";
+    height: $height;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $width;
+  }
+}
+.box-gradient-border {
+  @include ds-box-gradient-border;
+}
+
+%ds-box-gradient-border__title {
+  @extend h5;
+  margin-top: 0;
+}
+.box-gradient-border__title {
+  @extend %ds-box-gradient-border__title;
+}
+
+// -----------------------------------------------------------------------------
+// Box: Text
+// -----------------------------------------------------------------------------
+
+@mixin ds-box-text($margin: 0 0 24px, $padding: 25px) {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px $ds-color-box-shadow;
+  color: #444;
+  margin: $margin;
+  padding: $padding;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.box-text {
+  @include ds-box-text;
+}
+
+%ds-box-text__heading {
+  margin-top: 0;
+}
+.box-text__heading {
+  @extend %ds-box-text__heading;
+}
+
+@mixin ds-box-text__heading-image($margin: -25px -25px 25px) {
+  margin: $margin;
+
+  img {
+    border-radius: 2px 2px 0 0;
+  }
+}
+.box-text__heading-image {
+  @include ds-box-text__heading-image;
+}
+
+
+// -----------------------------------------------------------------------------
+// <hr> gradient
+// -----------------------------------------------------------------------------
+
+%ds-hr-gradient {
+  @extend %ds-gradient-background;
+  border: 0;
+  display: block;
+  height: 3px;
+  margin: 1rem auto;
+}
+.hr-gradient {
+  @extend %ds-hr-gradient;
+}
+
+.hr-gradient--medium {
+  width: 200px;
+}
+
+.hr-gradient--small {
+  width: 80px;
+}
+
+// -----------------------------------------------------------------------------
+// Polaroid
+// -----------------------------------------------------------------------------
+
+@mixin ds-polaroid($margin: 0 0 16px, $padding: 12px) {
+  @extend %ds-clearfix;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px $ds-color-box-shadow;
+  margin: $margin;
+  padding: $padding;
+
+  img {
+    float: left;
+  }
+}
+.polaroid {
+  @include ds-polaroid;
+}
+
+%ds-polaroid--circle {
+  border-radius: 999em;
+  display: inline-block;
+  padding: 8px;
+
+  img {
+    border-radius: 999em;
+  }
+}
+.polaroid--circle {
+  @extend %ds-polaroid--circle;
+}

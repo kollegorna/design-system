@@ -7,8 +7,20 @@
 @import "../../../../scss/_design-system";
 
 
+.header {
+  border-bottom: 1px solid $ds-color-border;
+  margin: 0 0 3rem;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+.header__headline {
+  @extend %h5;
+  color: $ds-color-text-light;
+}
 
 .styleguide {
   width: $ds-max-width;
   margin: 0 auto;
+  padding: 0 0 4rem;
 }
