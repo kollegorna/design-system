@@ -216,7 +216,7 @@ pre {
   margin: $ds-type-margin 0;
   padding: ds-rem-calc(16);
   white-space: pre;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-wrap: break-word;
 }
 
