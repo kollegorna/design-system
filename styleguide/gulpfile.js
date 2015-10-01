@@ -6,17 +6,22 @@ var messages = {
   build:  'Building Middleman...'
 };
 
+gulp.task('copy-images', ['middleman-build'], function() {
+  return gulp.src('../images/*.*')
+      .pipe(gulp.dest('build/assets/images/'));
+});
+
 gulp.task('middleman-build', function(done) {
   browserSync.notify(messages.build);
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', done);
 });
 
-gulp.task('browser-reload', ['middleman-build'], function() {
+gulp.task('browser-reload', ['copy-images'], function() {
   browserSync.notify(messages.reload);
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['middleman-build'], function() {
+gulp.task('browser-sync', ['copy-images', 'middleman-build'], function() {
   browserSync({
     server: {
       baseDir: 'build'
@@ -32,6 +37,7 @@ gulp.task('watch', function() {
   gulp.watch('source/assets/javascripts/*.js', ['browser-reload']);
   gulp.watch('source/assets/stylesheets/*.css.scss', ['browser-reload']);
   gulp.watch('../scss/**', ['browser-reload']);
+  gulp.watch('../images/**', ['browser-reload']);
 });
 
 gulp.task('serve', ['browser-sync', 'watch']);
