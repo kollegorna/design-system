@@ -259,6 +259,21 @@
   img {
     float: left;
   }
+
+  figcaption {
+    @extend %ds-t-meta;
+    @extend %ds-t-small;
+    padding-top: 0.6rem;
+
+    p {
+      @extend %ds-t-small;
+      margin-bottom: 0.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .polaroid {
   @include ds-polaroid;
