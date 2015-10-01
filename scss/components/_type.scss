@@ -55,33 +55,6 @@
 }
 
 // -----------------------------------------------------------------------------
-// Inline list
-// Used for example for buttons, tags…
-//
-// Example: <ul class="t-list-inline">…</ul>
-// -----------------------------------------------------------------------------
-
-/*
-%ds-t-list-inline {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-
-  li {
-    display: inline-block;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-.t-list-inline {
-  @extend %ds-t-list-inline;
-}
-*/
-
-// -----------------------------------------------------------------------------
 // Lists
 // -----------------------------------------------------------------------------
 
@@ -99,17 +72,20 @@
 /**
  * Inline
  */
-.t-list-inline {
+%t-list-inline {
   @extend %t-list-unstyled;
 
   & > li {
     display: inline-block;
-    margin-right: $ds-type-margin;
+    margin-right: 0.7rem;
 
     &:last-child {
       margin-right: 0;
     }
   }
+}
+.t-list-inline {
+  @extend %t-list-inline;
 }
 
 // -----------------------------------------------------------------------------
