@@ -3,15 +3,15 @@
 // -----------------------------------------------------------------------------
 
 $ds-color-kollegorna:      #F4E7B7;
-$ds-color-charcoal:        #333333;
+$ds-color-charcoal:        #201e1e;
 $ds-color-white:           #FFFFFF;
 $ds-color-sea:             #00C7FD;
 
-$ds-color-orange:          #F77916;
-$ds-color-orange-power:    #E86F12;
-$ds-color-orange-dark:     #B55015;
-$ds-color-orange-darkest:  #A64912;
-$ds-color-green:           #25C480;
+$ds-color-orange:          #f7b05b;
+$ds-color-orange-power:    #ffc15e;
+$ds-color-orange-dark:     $ds-color-orange;
+$ds-color-orange-darkest:  $ds-color-orange;
+$ds-color-green:           #e1dd8f;
 $ds-color-sand:            #CEBD80;
 $ds-color-clay:            #93875D;
 $ds-color-mud:             #B7B19C;
@@ -32,7 +32,7 @@ $ds-color-magnesium:       #B2B2B2;
 // Use these variables in other files for easy color changes
 // -----------------------------------------------------------------------------
 
-$ds-color-background:       $ds-color-kollegorna;
+$ds-color-background:       $ds-color-charcoal;
 $ds-color-box-shadow:       #B7B19C;
 $ds-color-text:             $ds-color-judge;
 $ds-color-text-light:       $ds-color-clay;
