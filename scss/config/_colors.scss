@@ -3,17 +3,22 @@
 // -----------------------------------------------------------------------------
 
 $ds-color-kollegorna:      #F4E7B7;
+$ds-color-light-gray:      #f5f5f5;
 $ds-color-charcoal:        #222222;
 $ds-color-white:           #FFFFFF;
 $ds-color-black:           #000000;
-$ds-color-sea:             #00C7FD;
 
-$ds-color-orange:          #f7b05b;
+$ds-color-orange:          #FD812D;
 $ds-color-orange-power:    #ffc15e;
 $ds-color-orange-dark:     $ds-color-orange;
 $ds-color-orange-darkest:  $ds-color-orange;
-$ds-color-red:             #f06543;
-$ds-color-green:           #e1dd8f;
+$ds-color-red:             #EE6055;
+$ds-color-green:           #00C66B;
+$ds-color-yellow:          #FFFC78;
+$ds-color-blue:            #5CD7F0;
+
+// Legacy Colors
+$ds-color-sea:             #00C7FD;
 $ds-color-sand:            #CEBD80;
 $ds-color-clay:            #93875D;
 $ds-color-mud:             #B7B19C;
@@ -25,7 +30,6 @@ $ds-color-kelp:            #484436;
 // Appley grays
 $ds-color-gallery:         #F0EFF0;
 $ds-color-gainsboro:       #DCDCDC;
-$ds-color-light-gray:      #D6D5D6;
 $ds-color-magnesium:       #B2B2B2;
 
 
@@ -34,13 +38,13 @@ $ds-color-magnesium:       #B2B2B2;
 // Use these variables in other files for easy color changes
 // -----------------------------------------------------------------------------
 
-$ds-color-background:       $ds-color-charcoal;
+$ds-color-background:       $ds-color-light-gray;
 $ds-color-box-shadow:       #B7B19C;
-$ds-color-text:             $ds-color-white;
-$ds-color-text-light:       $ds-color-white;
-$ds-color-link:             $ds-color-orange;
-$ds-color-heading:          $ds-color-white;
-$ds-color-selection:        $ds-color-orange;
+$ds-color-text:             $ds-color-charcoal;
+$ds-color-text-light:       lighten($ds-color-charcoal, 20);
+$ds-color-link:             $ds-color-green;
+$ds-color-heading:          $ds-color-charcoal;
+$ds-color-selection:        $ds-color-yellow;
 $ds-color-selection-text:   $ds-color-charcoal;
 $ds-color-input:            $ds-color-white;
 $ds-color-input-border:     $ds-color-gainsboro;
