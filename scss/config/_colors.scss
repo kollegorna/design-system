@@ -42,7 +42,7 @@ $ds-color-background:       $ds-color-light-gray;
 $ds-color-box-shadow:       #B7B19C;
 $ds-color-text:             $ds-color-charcoal;
 $ds-color-text-light:       lighten($ds-color-charcoal, 20);
-$ds-color-link:             darken($ds-color-blue, 20);
+$ds-color-link:             $ds-color-green;
 $ds-color-heading:          $ds-color-charcoal;
 $ds-color-selection:        $ds-color-yellow;
 $ds-color-selection-text:   $ds-color-charcoal;
