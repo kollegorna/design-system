@@ -72,8 +72,8 @@ $ds-rem-base: 18px !default;
 // Text
 // -----------------------------------------------------------------------------
 
-$ds-font-family: "Operator SSm A", "Operator SSm B", monospace !default;
-$ds-font-family-complementary: "Whitney SSm A", "Whitney SSm B", "Helvetica Neue", sans-serif !default;
+$ds-font-family: "Whitney SSm A", "Whitney SSm B", "Helvetica Neue", sans-serif !default;
+$ds-font-family-complementary: "Operator SSm A", "Operator SSm B", monospace !default;
 $ds-font-size: 100% !default;
 $ds-font-size-body-copy: ds-rem-calc(20) !default;
 $ds-font-size-small: ds-rem-calc(14) !default;
