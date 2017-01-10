@@ -4,8 +4,26 @@
 
 a,
 a:active {
-  color: $ds-color-link;
+  color: $ds-color-charcoal;
   text-decoration: none;
+
+  &.underlined {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $ds-color-link;
+    }
+
+    &:hover {
+      color: $ds-color-link;
+    }
+  }
 }
 
 a:hover,
