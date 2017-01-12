@@ -1,7 +1,9 @@
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
 
 a.underlined {
   border-bottom: 1px solid $ds-color-link;
-  display: inline-block;
 
   &:hover {
     color: $ds-color-link;
