@@ -28,7 +28,7 @@ a:link {
 
 %h1-6 {
   color: $ds-color-heading;
-  font-weight: $ds-font-weight;
+  font-weight: $ds-font-weight-bold;
   line-height: $ds-headings-line-height;
   margin: 1.2rem 0 1rem;
 
@@ -40,7 +40,6 @@ a:link {
 %h1 {
   @extend %h1-6;
   font-size: $ds-h1-font-size;
-  font-weight: $ds-font-weight-light;
 }
 h1 {
   @extend %h1;
@@ -48,8 +47,7 @@ h1 {
 
 %h2 {
   @extend %h1-6;
-  font-size:   $ds-h2-font-size;
-  font-weight: $ds-font-weight-light;
+  font-size: $ds-h2-font-size;
 }
 h2 {
   @extend %h2;
