@@ -30,7 +30,7 @@ a:link {
   color: $ds-color-heading;
   font-weight: $ds-font-weight-bold;
   line-height: $ds-headings-line-height;
-  margin: 1.2rem 0 1rem;
+  margin: 2rem 0 1rem;
 
   a {
     font-weight: inherit;
@@ -101,6 +101,7 @@ ol,
 ul,
 dl {
   font-size: $ds-font-size-body-copy;
+  line-height: 1.8;
 }
 
 p {
@@ -278,9 +279,13 @@ address {
 
 ul,
 ol {
-  list-style: disc inside;
+  list-style: disc outside;
   margin: 0 0 $ds-type-margin;
   padding: 0;
+
+  li {
+    margin-bottom: $ds-type-margin/2;
+  }
 }
 
 ol {
