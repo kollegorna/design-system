@@ -23,9 +23,6 @@ body {
   font-weight: $ds-font-weight;
   line-height: $ds-line-height;
   overflow-x: hidden;
-  overflow-y: scroll;
   padding: 0;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-  transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  margin: 0;
 }
