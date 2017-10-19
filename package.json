@@ -1,0 +1,19 @@
+{
+  "name": "kollegorna-design-system",
+  "version": "1.0.0",
+  "description": "This is a primer for developing web stuff for Kollegorna. It contains basic typography, colors and other variables.",
+  "main": "scss/_design-system.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kollegorna/design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kollegorna/design-system/issues"
+  },
+  "homepage": "https://github.com/kollegorna/design-system#readme"
+}
